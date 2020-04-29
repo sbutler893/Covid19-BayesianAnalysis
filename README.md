@@ -1,4 +1,6 @@
-# covid19-project
+# Applying Bayesian Analysis to COVID-19:
+## What is helping to slow death rates?
+
 
 Example (requires bash; will work on Linux/MacOS):
 
