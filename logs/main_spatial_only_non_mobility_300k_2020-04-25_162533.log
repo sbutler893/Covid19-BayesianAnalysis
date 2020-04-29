@@ -1,0 +1,173 @@
+running
+  '/usr/lib/R/bin/R --slave --no-restore --no-save --no-restore --file=pipeline.R --args main_spatial_only_non_mobility_300k'
+
+[1] "Sat Apr 25 16:25:33 2020"
+[1] "[START] 2020-04-25 16:25:33"
+Loading required package: coda
+Linked to JAGS 4.3.0
+Loaded modules: basemod,bugs
+[1] "model name: main_spatial_only_non_mobility_300k"
+[1] "config file: ./models/main_spatial_only_non_mobility_300k.R"
+[1] "util.R loaded successfully."
+[1] "Lag (in days): 14"
+[1] 2091   40
+[1] "Dropped 287 rows for states with <10 total deaths."
+[1] 1804   40
+[1] "States: 44"
+ [1] "alabama"              "arizona"              "arkansas"            
+ [4] "california"           "colorado"             "connecticut"         
+ [7] "delaware"             "district of columbia" "florida"             
+[10] "georgia"              "idaho"                "illinois"            
+[13] "indiana"              "iowa"                 "kansas"              
+[16] "kentucky"             "louisiana"            "maine"               
+[19] "maryland"             "massachusetts"        "michigan"            
+[22] "minnesota"            "mississippi"          "missouri"            
+[25] "nebraska"             "nevada"               "new hampshire"       
+[28] "new jersey"           "new mexico"           "new york"            
+[31] "north carolina"       "ohio"                 "oklahoma"            
+[34] "oregon"               "pennsylvania"         "rhode island"        
+[37] "south carolina"       "tennessee"            "texas"               
+[40] "utah"                 "vermont"              "virginia"            
+[43] "washington"           "wisconsin"           
+[1] "Dropping rows with dates after 2020-03-27"
+[1] "Dropped 616 rows."
+[1] "Final dataframe is: 1188" "Final dataframe is: 16"  
+      Date            FutureDeathsPer100k DaysSince10Deaths  StateName        
+ Min.   :2020-03-01   Min.   :-0.27751    -12    : 43       Length:1188       
+ 1st Qu.:2020-03-07   1st Qu.: 0.00000    -13    : 43       Class :character  
+ Median :2020-03-14   Median : 0.03493    -14    : 43       Mode  :character  
+ Mean   :2020-03-14   Mean   : 0.16454    -15    : 43                         
+ 3rd Qu.:2020-03-21   3rd Qu.: 0.14052    -16    : 43                         
+ Max.   :2020-03-27   Max.   : 4.10998    -11    : 42                         
+                                          (Other):931                         
+    StateID        PopDensity         MedianAge       StayAtHome    
+ Min.   : 1.00   Min.   :   17.29   Min.   :30.70   Min.   :-41.00  
+ 1st Qu.:11.75   1st Qu.:   58.22   1st Qu.:37.05   1st Qu.:-22.00  
+ Median :22.50   Median :  115.64   Median :38.30   Median :-15.00  
+ Mean   :22.50   Mean   :  492.69   Mean   :38.31   Mean   :-14.95  
+ 3rd Qu.:33.25   3rd Qu.:  263.92   3rd Qu.:39.33   3rd Qu.: -7.00  
+ Max.   :44.00   Max.   :11814.54   Max.   :44.60   Max.   :  8.00  
+                                                                    
+   BizClosure     SchoolClosure     RetailAndRecPctChg GroceryPharmacyPctChg
+ Min.   :-41.00   Min.   :-31.000   Min.   :-63.00     Min.   :-37.000      
+ 1st Qu.:-18.00   1st Qu.: -9.000   1st Qu.:-33.00     1st Qu.: -1.000      
+ Median :-11.00   Median : -2.500   Median : -4.00     Median :  7.000      
+ Mean   :-11.55   Mean   : -2.568   Mean   :-11.12     Mean   :  5.341      
+ 3rd Qu.: -4.00   3rd Qu.:  5.000   3rd Qu.:  8.00     3rd Qu.: 13.000      
+ Max.   :  8.00   Max.   : 16.000   Max.   : 24.00     Max.   : 48.000      
+                                                                            
+  ParksPctChg     TransitPctChg    WorkplacesPctChg ResidentialPctChg
+ Min.   :-68.00   Min.   :-75.00   Min.   :-67.00   Min.   :-5.000   
+ 1st Qu.: -1.00   1st Qu.:-29.00   1st Qu.:-32.00   1st Qu.: 0.000   
+ Median : 20.00   Median : -6.00   Median : -6.00   Median : 3.000   
+ Mean   : 22.47   Mean   :-13.16   Mean   :-15.31   Mean   : 6.557   
+ 3rd Qu.: 42.00   3rd Qu.:  4.00   3rd Qu.:  2.00   3rd Qu.:13.000   
+ Max.   :187.00   Max.   : 32.00   Max.   : 18.00   Max.   :28.000   
+                                                                     
+Loading required package: methods
+Loading required package: sp
+Loading required package: spData
+To access larger datasets in this package, install the spDataLarge
+package with: `install.packages('spDataLarge',
+repos='https://nowosad.github.io/drat/', type='source')`
+Loading required package: sf
+Linking to GEOS 3.6.2, GDAL 2.2.3, PROJ 4.9.3
+Checking rgeos availability: TRUE
+  DaysSince10Deaths PopDensity MedianAge StayAtHome BizClosure SchoolClosure
+1                24    96.9221      38.9        -34        -26           -16
+2                22    96.9221      38.9        -33        -25           -15
+3                21    96.9221      38.9        -32        -24           -14
+4                20    96.9221      38.9        -31        -23           -13
+5                19    96.9221      38.9        -30        -22           -12
+6                18    96.9221      38.9        -29        -21           -11
+[1] "description: No mobility indicators"
+[1] "model_string: 3"
+[1] "thin: 3"
+[1] "burnin: 50000"
+[1] "n.iter: 3e+05"
+[1] "params: beta"  "params: sig"   "params: tau_y"
+[1] "Instantiating model..."
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+Graph information:
+   Observed stochastic nodes: 1188
+   Unobserved stochastic nodes: 10
+   Total graph size: 17477
+
+Initializing model
+
+[1] "Burn-in for 50000 iterations..."
+[1] "Burn-in complete"
+[1] "Sampling for 3e+05 iterations..."
+[1] "/home/ubuntu/covid19-project"
+[1] "Saving model, samples to: ./out/main_spatial_only_non_mobility_300k.RData"
+[1] "RData file saved."
+
+Iterations = 301003:601000
+Thinning interval = 3 
+Number of chains = 2 
+Sample size per chain = 1e+05 
+
+1. Empirical mean and standard deviation for each variable,
+   plus standard error of the mean:
+
+             Mean       SD  Naive SE Time-series SE
+beta[1]  0.125042 0.009693 2.167e-05      2.220e-05
+beta[2]  0.004394 0.057123 1.277e-04      7.280e-04
+beta[3] -0.019406 0.046846 1.048e-04      4.999e-04
+beta[4]  0.097337 0.060729 1.358e-04      8.375e-04
+beta[5]  0.083902 0.103497 2.314e-04      2.393e-03
+beta[6] -0.043185 0.100088 2.238e-04      2.281e-03
+sig[1]   0.281389 0.005889 1.317e-05      1.315e-05
+sig[2]   0.507848 0.064372 1.439e-04      2.996e-04
+tau_y   12.646074 0.528828 1.182e-03      1.181e-03
+
+2. Quantiles for each variable:
+
+            2.5%        5%       50%      95%   97.5%
+beta[1]  0.10603  0.109097  0.125007  0.14105  0.1440
+beta[2] -0.10830 -0.089592  0.004676  0.09785  0.1164
+beta[3] -0.11220 -0.096565 -0.019446  0.05750  0.0727
+beta[4] -0.02255 -0.002032  0.097249  0.19711  0.2173
+beta[5] -0.12176 -0.087050  0.084018  0.25404  0.2866
+beta[6] -0.23840 -0.205841 -0.044164  0.12166  0.1570
+sig[1]   0.27014  0.271879  0.281292  0.29124  0.2932
+sig[2]   0.39933  0.413641  0.501839  0.62273  0.6510
+tau_y   11.63108 11.789528 12.638224 13.52851 13.7030
+
+[1] "ESS:"
+   beta[1]    beta[2]    beta[3]    beta[4]    beta[5]    beta[6]     sig[1] 
+190659.337   6158.524   8794.112   5254.349   1876.662   1922.562 200657.042 
+    sig[2]      tau_y 
+ 46254.241 200535.207 
+[1] "Gelman Diagnostic:"
+Potential scale reduction factors:
+
+        Point est. Upper C.I.
+beta[1]          1       1.00
+beta[2]          1       1.00
+beta[3]          1       1.00
+beta[4]          1       1.00
+beta[5]          1       1.00
+beta[6]          1       1.01
+sig[1]           1       1.00
+sig[2]           1       1.00
+tau_y            1       1.00
+
+Multivariate psrf
+
+1
+[1] "Computing DIC ... ( thin = 3 )"
+Mean deviance:  355.8 
+penalty 45.21 
+Penalized deviance: 401 
+[1] "Computing WAIC / Pw ..."
+Error in jags.samples(model, variable.names, n.iter, thin, type = "trace",  : 
+  No valid monitors set
+Calls: evalmodel -> waic -> coda.samples -> jags.samples
+In addition: Warning message:
+In FUN(X[[i]], ...) : Failed to set trace monitor for like
+Variable like not found
+
+Execution halted

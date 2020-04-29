@@ -1,0 +1,246 @@
+running
+  '/usr/lib/R/bin/R --slave --no-restore --no-save --no-restore --file=pipeline.R --args main_spatial_bernoulli_nodays_300k'
+
+[1] "Sun Apr 26 13:50:11 2020"
+[1] "[START] 2020-04-26 13:50:11"
+Loading required package: coda
+Linked to JAGS 4.3.0
+Loaded modules: basemod,bugs
+[1] "model name: main_spatial_bernoulli_nodays_300k"
+[1] "config file: ./models/main_spatial_bernoulli_nodays_300k.R"
+[1] "util.R loaded successfully."
+[1] "Lag (in days): 14"
+[1] 2091   40
+[1] "Dropped 287 rows for states with <10 total deaths."
+[1] 1804   40
+[1] "States: 44"
+ [1] "alabama"              "arizona"              "arkansas"            
+ [4] "california"           "colorado"             "connecticut"         
+ [7] "delaware"             "district of columbia" "florida"             
+[10] "georgia"              "idaho"                "illinois"            
+[13] "indiana"              "iowa"                 "kansas"              
+[16] "kentucky"             "louisiana"            "maine"               
+[19] "maryland"             "massachusetts"        "michigan"            
+[22] "minnesota"            "mississippi"          "missouri"            
+[25] "nebraska"             "nevada"               "new hampshire"       
+[28] "new jersey"           "new mexico"           "new york"            
+[31] "north carolina"       "ohio"                 "oklahoma"            
+[34] "oregon"               "pennsylvania"         "rhode island"        
+[37] "south carolina"       "tennessee"            "texas"               
+[40] "utah"                 "vermont"              "virginia"            
+[43] "washington"           "wisconsin"           
+[1] "Dropping rows with dates after 2020-03-27"
+[1] "Dropped 616 rows."
+[1] "Final dataframe is: 1188" "Final dataframe is: 16"  
+      Date            FutureDeathsPer100k DaysSince10Deaths  StateName        
+ Min.   :2020-03-01   Min.   :-0.27751    -12    : 43       Length:1188       
+ 1st Qu.:2020-03-07   1st Qu.: 0.00000    -13    : 43       Class :character  
+ Median :2020-03-14   Median : 0.03493    -14    : 43       Mode  :character  
+ Mean   :2020-03-14   Mean   : 0.16454    -15    : 43                         
+ 3rd Qu.:2020-03-21   3rd Qu.: 0.14052    -16    : 43                         
+ Max.   :2020-03-27   Max.   : 4.10998    -11    : 42                         
+                                          (Other):931                         
+    StateID        PopDensity         MedianAge       StayAtHome    
+ Min.   : 1.00   Min.   :   17.29   Min.   :30.70   Min.   :-41.00  
+ 1st Qu.:11.75   1st Qu.:   58.22   1st Qu.:37.05   1st Qu.:-22.00  
+ Median :22.50   Median :  115.64   Median :38.30   Median :-15.00  
+ Mean   :22.50   Mean   :  492.69   Mean   :38.31   Mean   :-14.95  
+ 3rd Qu.:33.25   3rd Qu.:  263.92   3rd Qu.:39.33   3rd Qu.: -7.00  
+ Max.   :44.00   Max.   :11814.54   Max.   :44.60   Max.   :  8.00  
+                                                                    
+   BizClosure     SchoolClosure     RetailAndRecPctChg GroceryPharmacyPctChg
+ Min.   :-41.00   Min.   :-31.000   Min.   :-63.00     Min.   :-37.000      
+ 1st Qu.:-18.00   1st Qu.: -9.000   1st Qu.:-33.00     1st Qu.: -1.000      
+ Median :-11.00   Median : -2.500   Median : -4.00     Median :  7.000      
+ Mean   :-11.55   Mean   : -2.568   Mean   :-11.12     Mean   :  5.341      
+ 3rd Qu.: -4.00   3rd Qu.:  5.000   3rd Qu.:  8.00     3rd Qu.: 13.000      
+ Max.   :  8.00   Max.   : 16.000   Max.   : 24.00     Max.   : 48.000      
+                                                                            
+  ParksPctChg     TransitPctChg    WorkplacesPctChg ResidentialPctChg
+ Min.   :-68.00   Min.   :-75.00   Min.   :-67.00   Min.   :-5.000   
+ 1st Qu.: -1.00   1st Qu.:-29.00   1st Qu.:-32.00   1st Qu.: 0.000   
+ Median : 20.00   Median : -6.00   Median : -6.00   Median : 3.000   
+ Mean   : 22.47   Mean   :-13.16   Mean   :-15.31   Mean   : 6.557   
+ 3rd Qu.: 42.00   3rd Qu.:  4.00   3rd Qu.:  2.00   3rd Qu.:13.000   
+ Max.   :187.00   Max.   : 32.00   Max.   : 18.00   Max.   :28.000   
+                                                                     
+Loading required package: methods
+Loading required package: sp
+Loading required package: spData
+To access larger datasets in this package, install the spDataLarge
+package with: `install.packages('spDataLarge',
+repos='https://nowosad.github.io/drat/', type='source')`
+Loading required package: sf
+Linking to GEOS 3.6.2, GDAL 2.2.3, PROJ 4.9.3
+Checking rgeos availability: TRUE
+  PopDensity MedianAge StayAtHome BizClosure SchoolClosure RetailAndRecPctChg
+1    96.9221      38.9        -34        -26           -16                 16
+2    96.9221      38.9        -33        -25           -15                  8
+3    96.9221      38.9        -32        -24           -14                 20
+4    96.9221      38.9        -31        -23           -13                  7
+5    96.9221      38.9        -30        -22           -12                  7
+6    96.9221      38.9        -29        -21           -11                  9
+  GroceryPharmacyPctChg ParksPctChg TransitPctChg WorkplacesPctChg
+1                    10          53            21                4
+2                     4          -2             5                2
+3                    15          33             5                2
+4                     0          -8             2                0
+5                     6           0             4                2
+6                     4          29            10                2
+  ResidentialPctChg
+1                -2
+2                 0
+3                -1
+4                 1
+5                 1
+6                -1
+[1] "------------------- X: ----------------------"
+  PopDensity MedianAge StayAtHome BizClosure SchoolClosure RetailAndRecPctChg
+1 -0.2263226 0.2476535  -1.911308  -1.539368    -1.5215157          1.2479602
+2 -0.2263226 0.2476535  -1.810953  -1.432871    -1.4082387          0.8798468
+3 -0.2263226 0.2476535  -1.710598  -1.326374    -1.2949618          1.4320169
+4 -0.2263226 0.2476535  -1.610243  -1.219877    -1.1816848          0.8338326
+5 -0.2263226 0.2476535  -1.509888  -1.113379    -1.0684078          0.8338326
+6 -0.2263226 0.2476535  -1.409532  -1.006882    -0.9551308          0.9258610
+  GroceryPharmacyPctChg ParksPctChg TransitPctChg WorkplacesPctChg
+1            0.36405059   0.8885998     1.5797931        1.0155346
+2           -0.10477553  -0.7122470     0.8397505        0.9103511
+3            0.75473902   0.3064737     0.8397505        0.9103511
+4           -0.41732628  -0.8868848     0.7009925        0.8051676
+5            0.05149984  -0.6540344     0.7934979        0.9103511
+6           -0.10477553   0.1900485     1.0710138        0.9103511
+  ResidentialPctChg
+1        -1.0637544
+2        -0.8151334
+3        -0.9394439
+4        -0.6908230
+5        -0.6908230
+6        -0.9394439
+[1] "description: Bernoulli selectors without DaysSince10Deaths"
+[1] "model_string: 3"
+[1] "thin: 3"
+[1] "burnin: 50000"
+[1] "n.iter: 3e+05"
+[1] "params: beta"     "params: selector"
+[1] "Instantiating model..."
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+Graph information:
+   Observed stochastic nodes: 1188
+   Unobserved stochastic nodes: 26
+   Total graph size: 25811
+
+Initializing model
+
+[1] "Burn-in for 50000 iterations..."
+[1] "Burn-in complete"
+[1] "Sampling for 3e+05 iterations..."
+[1] "/home/ubuntu/covid19-project"
+[1] "Saving model, samples to: ./out/main_spatial_bernoulli_nodays_300k.RData"
+[1] "RData file saved."
+
+Iterations = 301003:601000
+Thinning interval = 3 
+Number of chains = 2 
+Sample size per chain = 1e+05 
+
+1. Empirical mean and standard deviation for each variable,
+   plus standard error of the mean:
+
+                  Mean      SD  Naive SE Time-series SE
+beta[1]      -0.004220 9.98539 0.0223280      0.0223279
+beta[2]      -0.029261 9.96734 0.0222877      0.0224024
+beta[3]      -0.015817 9.87067 0.0220715      0.0220500
+beta[4]       0.043821 9.72910 0.0217549      0.0217550
+beta[5]       0.012536 9.21062 0.0205956      0.0205815
+beta[6]       0.012870 9.92504 0.0221931      0.0221881
+beta[7]       0.013785 9.98251 0.0223216      0.0223216
+beta[8]      -0.030994 9.82083 0.0219600      0.0220108
+beta[9]      -0.071293 7.33645 0.0164048      0.0162774
+beta[10]     -0.033214 9.93069 0.0222057      0.0221249
+beta[11]      0.142378 2.22968 0.0049857      0.0046811
+selector[1]   0.005395 0.07325 0.0001638      0.0006535
+selector[2]   0.005075 0.07106 0.0001589      0.0004877
+selector[3]   0.023110 0.15025 0.0003360      0.0032114
+selector[4]   0.052995 0.22402 0.0005009      0.0064040
+selector[5]   0.146085 0.35319 0.0007898      0.0164568
+selector[6]   0.010680 0.10279 0.0002298      0.0016786
+selector[7]   0.004450 0.06656 0.0001488      0.0003074
+selector[8]   0.034275 0.18194 0.0004068      0.0030285
+selector[9]   0.460160 0.49841 0.0011145      0.0275971
+selector[10]  0.011945 0.10864 0.0002429      0.0023876
+selector[11]  0.950615 0.21667 0.0004845      0.0177634
+
+2. Quantiles for each variable:
+
+                  2.5%        5%       50%     95%  97.5%
+beta[1]      -19.59337 -16.42144 -0.012635 16.4510 19.605
+beta[2]      -19.57015 -16.40331 -0.003033 16.4082 19.610
+beta[3]      -19.46000 -16.33239 -0.053232 16.2769 19.427
+beta[4]      -19.31042 -16.13113 -0.063831 16.2328 19.476
+beta[5]      -18.73858 -15.56004 -0.076769 15.6765 18.934
+beta[6]      -19.49040 -16.31801  0.041645 16.3898 19.526
+beta[7]      -19.53691 -16.40746 -0.011888 16.4339 19.579
+beta[8]      -19.61274 -16.34260  0.030197 16.2124 19.356
+beta[9]      -16.86003 -13.23271 -0.106908 13.1855 16.778
+beta[10]     -19.57181 -16.40035  0.018193 16.3187 19.475
+beta[11]       0.01813   0.06836  0.169454  0.1996  0.269
+selector[1]    0.00000   0.00000  0.000000  0.0000  0.000
+selector[2]    0.00000   0.00000  0.000000  0.0000  0.000
+selector[3]    0.00000   0.00000  0.000000  0.0000  0.000
+selector[4]    0.00000   0.00000  0.000000  1.0000  1.000
+selector[5]    0.00000   0.00000  0.000000  1.0000  1.000
+selector[6]    0.00000   0.00000  0.000000  0.0000  0.000
+selector[7]    0.00000   0.00000  0.000000  0.0000  0.000
+selector[8]    0.00000   0.00000  0.000000  0.0000  1.000
+selector[9]    0.00000   0.00000  0.000000  1.0000  1.000
+selector[10]   0.00000   0.00000  0.000000  0.0000  0.000
+selector[11]   0.00000   1.00000  1.000000  1.0000  1.000
+
+[1] "ESS:"
+     beta[1]      beta[2]      beta[3]      beta[4]      beta[5]      beta[6] 
+ 200000.0000  197987.1256  200389.5850  200000.0000  200281.7657  200133.8492 
+     beta[7]      beta[8]      beta[9]     beta[10]     beta[11]  selector[1] 
+ 200000.0000  199085.6966  203207.4378  201476.8512  214745.9003   12566.0125 
+ selector[2]  selector[3]  selector[4]  selector[5]  selector[6]  selector[7] 
+  21298.6981    2212.1170    1221.6613     461.2615    3749.6074   47898.9349 
+ selector[8]  selector[9] selector[10] selector[11] 
+   3624.5913     327.0586    2072.5184     246.5892 
+[1] "Gelman Diagnostic:"
+Potential scale reduction factors:
+
+             Point est. Upper C.I.
+beta[1]            1.00       1.00
+beta[2]            1.00       1.00
+beta[3]            1.00       1.00
+beta[4]            1.00       1.00
+beta[5]            1.00       1.00
+beta[6]            1.00       1.00
+beta[7]            1.00       1.00
+beta[8]            1.00       1.00
+beta[9]            1.00       1.00
+beta[10]           1.00       1.00
+beta[11]           1.11       1.11
+selector[1]        1.00       1.00
+selector[2]        1.01       1.01
+selector[3]        1.00       1.01
+selector[4]        1.00       1.01
+selector[5]        1.00       1.00
+selector[6]        1.00       1.00
+selector[7]        1.01       1.01
+selector[8]        1.00       1.00
+selector[9]        1.00       1.01
+selector[10]       1.00       1.00
+selector[11]       1.11       1.24
+
+Multivariate psrf
+
+1.01
+[1] "Computing DIC ... ( thin = 3 )"
+Mean deviance:  404.1 
+penalty 50.11 
+Penalized deviance: 454.2 
+[1] "Computing WAIC / Pw ..."
+[1] "467.674455119104 60.6330887171408"
+[1] "[FINISH] 2020-04-27 01:51:53"

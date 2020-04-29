@@ -1,0 +1,7 @@
+#!/bin/bash
+timestamp() {
+  date +"%Y-%m-%d_%H%M%S"
+}
+
+Rscript --no-save --no-restore --verbose pipeline.R $1 2>&1 | tee logs/$1_$(timestamp).log
+

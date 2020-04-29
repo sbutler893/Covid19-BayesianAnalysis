@@ -1,0 +1,223 @@
+running
+  '/usr/lib/R/bin/R --slave --no-restore --no-save --no-restore --file=pipeline.R --args main_spatial_scaled_300k_nodays'
+
+[1] "Sun Apr 26 15:55:28 2020"
+[1] "[START] 2020-04-26 15:55:28"
+Loading required package: coda
+Linked to JAGS 4.3.0
+Loaded modules: basemod,bugs
+[1] "model name: main_spatial_scaled_300k_nodays"
+[1] "config file: ./models/main_spatial_scaled_300k_nodays.R"
+[1] "util.R loaded successfully."
+[1] "Lag (in days): 14"
+[1] 2091   40
+[1] "Dropped 287 rows for states with <10 total deaths."
+[1] 1804   40
+[1] "States: 44"
+ [1] "alabama"              "arizona"              "arkansas"            
+ [4] "california"           "colorado"             "connecticut"         
+ [7] "delaware"             "district of columbia" "florida"             
+[10] "georgia"              "idaho"                "illinois"            
+[13] "indiana"              "iowa"                 "kansas"              
+[16] "kentucky"             "louisiana"            "maine"               
+[19] "maryland"             "massachusetts"        "michigan"            
+[22] "minnesota"            "mississippi"          "missouri"            
+[25] "nebraska"             "nevada"               "new hampshire"       
+[28] "new jersey"           "new mexico"           "new york"            
+[31] "north carolina"       "ohio"                 "oklahoma"            
+[34] "oregon"               "pennsylvania"         "rhode island"        
+[37] "south carolina"       "tennessee"            "texas"               
+[40] "utah"                 "vermont"              "virginia"            
+[43] "washington"           "wisconsin"           
+[1] "Dropping rows with dates after 2020-03-27"
+[1] "Dropped 616 rows."
+[1] "Final dataframe is: 1188" "Final dataframe is: 16"  
+      Date            FutureDeathsPer100k DaysSince10Deaths  StateName        
+ Min.   :2020-03-01   Min.   :-0.27751    -12    : 43       Length:1188       
+ 1st Qu.:2020-03-07   1st Qu.: 0.00000    -13    : 43       Class :character  
+ Median :2020-03-14   Median : 0.03493    -14    : 43       Mode  :character  
+ Mean   :2020-03-14   Mean   : 0.16454    -15    : 43                         
+ 3rd Qu.:2020-03-21   3rd Qu.: 0.14052    -16    : 43                         
+ Max.   :2020-03-27   Max.   : 4.10998    -11    : 42                         
+                                          (Other):931                         
+    StateID        PopDensity         MedianAge       StayAtHome    
+ Min.   : 1.00   Min.   :   17.29   Min.   :30.70   Min.   :-41.00  
+ 1st Qu.:11.75   1st Qu.:   58.22   1st Qu.:37.05   1st Qu.:-22.00  
+ Median :22.50   Median :  115.64   Median :38.30   Median :-15.00  
+ Mean   :22.50   Mean   :  492.69   Mean   :38.31   Mean   :-14.95  
+ 3rd Qu.:33.25   3rd Qu.:  263.92   3rd Qu.:39.33   3rd Qu.: -7.00  
+ Max.   :44.00   Max.   :11814.54   Max.   :44.60   Max.   :  8.00  
+                                                                    
+   BizClosure     SchoolClosure     RetailAndRecPctChg GroceryPharmacyPctChg
+ Min.   :-41.00   Min.   :-31.000   Min.   :-63.00     Min.   :-37.000      
+ 1st Qu.:-18.00   1st Qu.: -9.000   1st Qu.:-33.00     1st Qu.: -1.000      
+ Median :-11.00   Median : -2.500   Median : -4.00     Median :  7.000      
+ Mean   :-11.55   Mean   : -2.568   Mean   :-11.12     Mean   :  5.341      
+ 3rd Qu.: -4.00   3rd Qu.:  5.000   3rd Qu.:  8.00     3rd Qu.: 13.000      
+ Max.   :  8.00   Max.   : 16.000   Max.   : 24.00     Max.   : 48.000      
+                                                                            
+  ParksPctChg     TransitPctChg    WorkplacesPctChg ResidentialPctChg
+ Min.   :-68.00   Min.   :-75.00   Min.   :-67.00   Min.   :-5.000   
+ 1st Qu.: -1.00   1st Qu.:-29.00   1st Qu.:-32.00   1st Qu.: 0.000   
+ Median : 20.00   Median : -6.00   Median : -6.00   Median : 3.000   
+ Mean   : 22.47   Mean   :-13.16   Mean   :-15.31   Mean   : 6.557   
+ 3rd Qu.: 42.00   3rd Qu.:  4.00   3rd Qu.:  2.00   3rd Qu.:13.000   
+ Max.   :187.00   Max.   : 32.00   Max.   : 18.00   Max.   :28.000   
+                                                                     
+Loading required package: methods
+Loading required package: sp
+Loading required package: spData
+To access larger datasets in this package, install the spDataLarge
+package with: `install.packages('spDataLarge',
+repos='https://nowosad.github.io/drat/', type='source')`
+Loading required package: sf
+Linking to GEOS 3.6.2, GDAL 2.2.3, PROJ 4.9.3
+Checking rgeos availability: TRUE
+  PopDensity MedianAge StayAtHome BizClosure SchoolClosure RetailAndRecPctChg
+1    96.9221      38.9        -34        -26           -16                 16
+2    96.9221      38.9        -33        -25           -15                  8
+3    96.9221      38.9        -32        -24           -14                 20
+4    96.9221      38.9        -31        -23           -13                  7
+5    96.9221      38.9        -30        -22           -12                  7
+6    96.9221      38.9        -29        -21           -11                  9
+  GroceryPharmacyPctChg ParksPctChg TransitPctChg WorkplacesPctChg
+1                    10          53            21                4
+2                     4          -2             5                2
+3                    15          33             5                2
+4                     0          -8             2                0
+5                     6           0             4                2
+6                     4          29            10                2
+  ResidentialPctChg
+1                -2
+2                 0
+3                -1
+4                 1
+5                 1
+6                -1
+[1] "------------------- X: ----------------------"
+  PopDensity MedianAge StayAtHome BizClosure SchoolClosure RetailAndRecPctChg
+1 -0.2263226 0.2476535  -1.911308  -1.539368    -1.5215157          1.2479602
+2 -0.2263226 0.2476535  -1.810953  -1.432871    -1.4082387          0.8798468
+3 -0.2263226 0.2476535  -1.710598  -1.326374    -1.2949618          1.4320169
+4 -0.2263226 0.2476535  -1.610243  -1.219877    -1.1816848          0.8338326
+5 -0.2263226 0.2476535  -1.509888  -1.113379    -1.0684078          0.8338326
+6 -0.2263226 0.2476535  -1.409532  -1.006882    -0.9551308          0.9258610
+  GroceryPharmacyPctChg ParksPctChg TransitPctChg WorkplacesPctChg
+1            0.36405059   0.8885998     1.5797931        1.0155346
+2           -0.10477553  -0.7122470     0.8397505        0.9103511
+3            0.75473902   0.3064737     0.8397505        0.9103511
+4           -0.41732628  -0.8868848     0.7009925        0.8051676
+5            0.05149984  -0.6540344     0.7934979        0.9103511
+6           -0.10477553   0.1900485     1.0710138        0.9103511
+  ResidentialPctChg
+1        -1.0637544
+2        -0.8151334
+3        -0.9394439
+4        -0.6908230
+5        -0.6908230
+6        -0.9394439
+[1] "description: Main Model - all predictors (minus DaysSince10Deaths), scaled"
+[1] "model_string: 3"
+[1] "thin: 3"
+[1] "burnin: 50000"
+[1] "n.iter: 3e+05"
+[1] "params: beta"  "params: sig"   "params: tau_y" "params: rho"  
+[1] "Instantiating model..."
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+Graph information:
+   Observed stochastic nodes: 1188
+   Unobserved stochastic nodes: 15
+   Total graph size: 24610
+
+Initializing model
+
+[1] "Burn-in for 50000 iterations..."
+[1] "Burn-in complete"
+[1] "Sampling for 3e+05 iterations..."
+[1] "/home/ubuntu/covid19-project"
+[1] "Saving model, samples to: ./out/main_spatial_scaled_300k_nodays.RData"
+[1] "RData file saved."
+
+Iterations = 301003:601000
+Thinning interval = 3 
+Number of chains = 2 
+Sample size per chain = 1e+05 
+
+1. Empirical mean and standard deviation for each variable,
+   plus standard error of the mean:
+
+             Mean       SD  Naive SE Time-series SE
+beta[1]  -0.02621 0.059370 1.328e-04      7.726e-04
+beta[2]  -0.01258 0.048285 1.080e-04      5.140e-04
+beta[3]   0.04406 0.063324 1.416e-04      8.823e-04
+beta[4]   0.08586 0.107481 2.403e-04      2.556e-03
+beta[5]  -0.19076 0.104162 2.329e-04      2.412e-03
+beta[6]   0.03292 0.036285 8.114e-05      2.447e-04
+beta[7]  -0.01396 0.013311 2.976e-05      5.480e-05
+beta[8]   0.03881 0.011202 2.505e-05      5.411e-05
+beta[9]  -0.16111 0.034458 7.705e-05      2.243e-04
+beta[10]  0.12287 0.055051 1.231e-04      6.247e-04
+beta[11]  0.25049 0.054380 1.216e-04      6.070e-04
+rho       0.60819 0.126256 2.823e-04      3.868e-04
+sig[1]    0.28414 0.005963 1.333e-05      1.357e-05
+sig[2]    0.52647 0.066464 1.486e-04      2.944e-04
+tau_y    12.40235 0.520236 1.163e-03      1.184e-03
+
+2. Quantiles for each variable:
+
+             2.5%       5%      50%      95%    97.5%
+beta[1]  -0.14303 -0.12346 -0.02623  0.07100  0.09028
+beta[2]  -0.10763 -0.09167 -0.01251  0.06675  0.08209
+beta[3]  -0.08066 -0.05978  0.04411  0.14869  0.16950
+beta[4]  -0.12748 -0.09000  0.08512  0.26410  0.29900
+beta[5]  -0.39479 -0.36271 -0.19019 -0.01973  0.01600
+beta[6]  -0.03805 -0.02674  0.03291  0.09264  0.10397
+beta[7]  -0.04009 -0.03587 -0.01399  0.00790  0.01216
+beta[8]   0.01684  0.02042  0.03880  0.05727  0.06069
+beta[9]  -0.22887 -0.21802 -0.16094 -0.10462 -0.09364
+beta[10]  0.01530  0.03284  0.12241  0.21341  0.23118
+beta[11]  0.14423  0.16159  0.25011  0.34027  0.35768
+rho       0.27795  0.35360  0.64043  0.74910  0.75678
+sig[1]    0.27274  0.27451  0.28404  0.29409  0.29611
+sig[2]    0.41407  0.42878  0.52032  0.64508  0.67351
+tau_y    11.40512 11.56243 12.39504 13.27069 13.44325
+
+[1] "ESS:"
+   beta[1]    beta[2]    beta[3]    beta[4]    beta[5]    beta[6]    beta[7] 
+  5901.933   8824.070   5147.812   1775.395   1869.547  21989.648  59009.200 
+   beta[8]    beta[9]   beta[10]   beta[11]        rho     sig[1]     sig[2] 
+ 42861.585  23615.533   7769.774   8044.119 106686.378 193122.031  50955.713 
+     tau_y 
+193191.785 
+[1] "Gelman Diagnostic:"
+Potential scale reduction factors:
+
+         Point est. Upper C.I.
+beta[1]           1       1.00
+beta[2]           1       1.00
+beta[3]           1       1.01
+beta[4]           1       1.00
+beta[5]           1       1.00
+beta[6]           1       1.00
+beta[7]           1       1.00
+beta[8]           1       1.00
+beta[9]           1       1.00
+beta[10]          1       1.00
+beta[11]          1       1.00
+rho               1       1.00
+sig[1]            1       1.00
+sig[2]            1       1.00
+tau_y             1       1.00
+
+Multivariate psrf
+
+1
+[1] "Computing DIC ... ( thin = 3 )"
+Mean deviance:  378.9 
+penalty 50.1 
+Penalized deviance: 428.9 
+[1] "Computing WAIC / Pw ..."
+[1] "442.75175862071 60.5792763181838"
+[1] "[FINISH] 2020-04-26 19:59:11"

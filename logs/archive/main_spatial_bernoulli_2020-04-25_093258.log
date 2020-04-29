@@ -1,0 +1,183 @@
+running
+  '/usr/lib/R/bin/R --slave --no-restore --no-save --no-restore --file=pipeline.R --args main_spatial_bernoulli'
+
+[1] "Sat Apr 25 09:32:58 AM 2020"
+[1] "[START] 2020-04-25 09:32:58"
+Loading required package: coda
+Linked to JAGS 4.3.0
+Loaded modules: basemod,bugs
+[1] "model name: main_spatial_bernoulli"
+[1] "config file: ./models/main_spatial_bernoulli.R"
+[1] "util.R loaded successfully."
+[1] "Lag (in days): 14"
+[1] 2091   40
+[1] "Dropped 287 rows for states with <10 total deaths."
+[1] 1804   40
+[1] "States: 44"
+ [1] "alabama"              "arizona"              "arkansas"            
+ [4] "california"           "colorado"             "connecticut"         
+ [7] "delaware"             "district of columbia" "florida"             
+[10] "georgia"              "idaho"                "illinois"            
+[13] "indiana"              "iowa"                 "kansas"              
+[16] "kentucky"             "louisiana"            "maine"               
+[19] "maryland"             "massachusetts"        "michigan"            
+[22] "minnesota"            "mississippi"          "missouri"            
+[25] "nebraska"             "nevada"               "new hampshire"       
+[28] "new jersey"           "new mexico"           "new york"            
+[31] "north carolina"       "ohio"                 "oklahoma"            
+[34] "oregon"               "pennsylvania"         "rhode island"        
+[37] "south carolina"       "tennessee"            "texas"               
+[40] "utah"                 "vermont"              "virginia"            
+[43] "washington"           "wisconsin"           
+[1] "Dropping rows with dates after 2020-03-27"
+[1] "Dropped 616 rows."
+[1] "Final dataframe is: 1188" "Final dataframe is: 16"  
+      Date            FutureDeathsPer100k DaysSince10Deaths  StateName        
+ Min.   :2020-03-01   Min.   :-0.27751    -12    : 43       Length:1188       
+ 1st Qu.:2020-03-07   1st Qu.: 0.00000    -13    : 43       Class :character  
+ Median :2020-03-14   Median : 0.03493    -14    : 43       Mode  :character  
+ Mean   :2020-03-14   Mean   : 0.16454    -15    : 43                         
+ 3rd Qu.:2020-03-21   3rd Qu.: 0.14052    -16    : 43                         
+ Max.   :2020-03-27   Max.   : 4.10998    -11    : 42                         
+                                          (Other):931                         
+    StateID        PopDensity         MedianAge       StayAtHome    
+ Min.   : 1.00   Min.   :   17.29   Min.   :30.70   Min.   :-41.00  
+ 1st Qu.:11.75   1st Qu.:   58.22   1st Qu.:37.05   1st Qu.:-22.00  
+ Median :22.50   Median :  115.64   Median :38.30   Median :-15.00  
+ Mean   :22.50   Mean   :  492.69   Mean   :38.31   Mean   :-14.95  
+ 3rd Qu.:33.25   3rd Qu.:  263.92   3rd Qu.:39.33   3rd Qu.: -7.00  
+ Max.   :44.00   Max.   :11814.54   Max.   :44.60   Max.   :  8.00  
+                                                                    
+   BizClosure     SchoolClosure     RetailAndRecPctChg GroceryPharmacyPctChg
+ Min.   :-41.00   Min.   :-31.000   Min.   :-63.00     Min.   :-37.000      
+ 1st Qu.:-18.00   1st Qu.: -9.000   1st Qu.:-33.00     1st Qu.: -1.000      
+ Median :-11.00   Median : -2.500   Median : -4.00     Median :  7.000      
+ Mean   :-11.55   Mean   : -2.568   Mean   :-11.12     Mean   :  5.341      
+ 3rd Qu.: -4.00   3rd Qu.:  5.000   3rd Qu.:  8.00     3rd Qu.: 13.000      
+ Max.   :  8.00   Max.   : 16.000   Max.   : 24.00     Max.   : 48.000      
+                                                                            
+  ParksPctChg     TransitPctChg    WorkplacesPctChg ResidentialPctChg
+ Min.   :-68.00   Min.   :-75.00   Min.   :-67.00   Min.   :-5.000   
+ 1st Qu.: -1.00   1st Qu.:-29.00   1st Qu.:-32.00   1st Qu.: 0.000   
+ Median : 20.00   Median : -6.00   Median : -6.00   Median : 3.000   
+ Mean   : 22.47   Mean   :-13.16   Mean   :-15.31   Mean   : 6.557   
+ 3rd Qu.: 42.00   3rd Qu.:  4.00   3rd Qu.:  2.00   3rd Qu.:13.000   
+ Max.   :187.00   Max.   : 32.00   Max.   : 18.00   Max.   :28.000   
+                                                                     
+Loading required package: methods
+Loading required package: sp
+Loading required package: spData
+Loading required package: sf
+Linking to GEOS 3.6.2, GDAL 2.2.3, PROJ 4.9.3
+Checking rgeos availability: TRUE
+  DaysSince10Deaths PopDensity MedianAge StayAtHome BizClosure SchoolClosure
+1                24    96.9221      38.9        -34        -26           -16
+2                22    96.9221      38.9        -33        -25           -15
+3                21    96.9221      38.9        -32        -24           -14
+4                20    96.9221      38.9        -31        -23           -13
+5                19    96.9221      38.9        -30        -22           -12
+6                18    96.9221      38.9        -29        -21           -11
+  RetailAndRecPctChg GroceryPharmacyPctChg ParksPctChg TransitPctChg
+1                 16                    10          53            21
+2                  8                     4          -2             5
+3                 20                    15          33             5
+4                  7                     0          -8             2
+5                  7                     6           0             4
+6                  9                     4          29            10
+  WorkplacesPctChg ResidentialPctChg
+1                4                -2
+2                2                 0
+3                2                -1
+4                0                 1
+5                2                 1
+6                2                -1
+[1] "description: Main Model: All Predictors; Spatial"
+[1] "model_string: 3"
+[1] "thin: 1"
+[1] "burnin: 50000"
+[1] "n.iter: 1e+05"
+[1] "params: beta"     "params: selector"
+[1] "Instantiating model..."
+[1] "Burn-in for 50000 iterations..."
+[1] "Burn-in complete"
+[1] "Sampling for 1e+05 iterations..."
+[1] "/home/h4x/git/covid19-project"
+[1] "Saving model, samples to: ./out/main_spatial_bernoulli.RData"
+[1] "RData file saved."
+
+Iterations = 101001:201000
+Thinning interval = 1 
+Number of chains = 2 
+Sample size per chain = 1e+05 
+
+1. Empirical mean and standard deviation for each variable,
+   plus standard error of the mean:
+
+                  Mean        SD  Naive SE Time-series SE
+beta[1]       0.103588  0.009954 2.226e-05      3.227e-05
+beta[2]      -0.011527  9.983221 2.232e-02      2.223e-02
+beta[3]       0.023756  9.975177 2.231e-02      2.241e-02
+beta[4]      -0.044318  9.994543 2.235e-02      2.235e-02
+beta[5]      -0.031208 10.003508 2.237e-02      2.230e-02
+beta[6]       0.030214  9.965150 2.228e-02      2.228e-02
+beta[7]      -0.044187  9.979034 2.231e-02      2.231e-02
+beta[8]      -0.006986  9.990436 2.234e-02      2.234e-02
+beta[9]      -0.017393  9.980006 2.232e-02      2.237e-02
+beta[10]     -0.008314  8.705737 1.947e-02      1.971e-02
+beta[11]      0.028824  9.956572 2.226e-02      2.226e-02
+beta[12]      0.121315  4.564142 1.021e-02      1.016e-02
+selector[1]   1.000000  0.000000 0.000e+00      0.000e+00
+selector[2]   0.005470  0.073757 1.649e-04      1.261e-03
+selector[3]   0.005390  0.073219 1.637e-04      1.187e-03
+selector[4]   0.002405  0.048982 1.095e-04      3.428e-04
+selector[5]   0.002535  0.050285 1.124e-04      4.682e-04
+selector[6]   0.003855  0.061969 1.386e-04      6.698e-04
+selector[7]   0.002815  0.052982 1.185e-04      4.232e-04
+selector[8]   0.001285  0.035824 8.010e-05      1.477e-04
+selector[9]   0.006265  0.078904 1.764e-04      6.049e-04
+selector[10]  0.237100  0.425305 9.510e-04      4.402e-02
+selector[11]  0.007960  0.088863 1.987e-04      2.115e-03
+selector[12]  0.795280  0.403498 9.022e-04      5.354e-02
+
+2. Quantiles for each variable:
+
+                  2.5%       5%        50%    95%   97.5%
+beta[1]        0.08408   0.0872  0.1035712  0.120  0.1231
+beta[2]      -19.56446 -16.4387 -0.0017459 16.482 19.6174
+beta[3]      -19.62555 -16.3988 -0.0012446 16.449 19.6157
+beta[4]      -19.60564 -16.4628 -0.0319044 16.394 19.5208
+beta[5]      -19.58978 -16.4883 -0.0213850 16.428 19.5886
+beta[6]      -19.48605 -16.4269 -0.0077158 16.378 19.5656
+beta[7]      -19.61510 -16.4967 -0.0227842 16.363 19.5530
+beta[8]      -19.56223 -16.4523 -0.0129408 16.446 19.5745
+beta[9]      -19.62988 -16.4844  0.0139454 16.426 19.5028
+beta[10]     -18.33418 -14.9999 -0.1388481 15.108 18.4495
+beta[11]     -19.59335 -16.4035  0.0003184 16.397 19.5060
+beta[12]     -11.69671  -6.9333  0.1319603  7.035 11.8658
+selector[1]    1.00000   1.0000  1.0000000  1.000  1.0000
+selector[2]    0.00000   0.0000  0.0000000  0.000  0.0000
+selector[3]    0.00000   0.0000  0.0000000  0.000  0.0000
+selector[4]    0.00000   0.0000  0.0000000  0.000  0.0000
+selector[5]    0.00000   0.0000  0.0000000  0.000  0.0000
+selector[6]    0.00000   0.0000  0.0000000  0.000  0.0000
+selector[7]    0.00000   0.0000  0.0000000  0.000  0.0000
+selector[8]    0.00000   0.0000  0.0000000  0.000  0.0000
+selector[9]    0.00000   0.0000  0.0000000  0.000  0.0000
+selector[10]   0.00000   0.0000  0.0000000  1.000  1.0000
+selector[11]   0.00000   0.0000  0.0000000  0.000  0.0000
+selector[12]   0.00000   0.0000  1.0000000  1.000  1.0000
+
+[1] "ESS:"
+     beta[1]      beta[2]      beta[3]      beta[4]      beta[5]      beta[6] 
+ 95159.39504 201745.11639 198135.03430 200000.00000 201275.69884 200000.00000 
+     beta[7]      beta[8]      beta[9]     beta[10]     beta[11]     beta[12] 
+200000.00000 200000.00000 199049.96029 195712.37443 200000.00000 194073.98081 
+ selector[1]  selector[2]  selector[3]  selector[4]  selector[5]  selector[6] 
+     0.00000   3636.03520   3888.53018  22422.17204  12827.41778   8691.40892 
+ selector[7]  selector[8]  selector[9] selector[10] selector[11] selector[12] 
+ 18211.14407  61839.28624  17014.24779    104.25061   2139.43577     52.40716 
+[1] "Gelman Diagnostic:"
+Error in chol.default(W) : 
+  the leading minor of order 13 is not positive definite
+Calls: evalsamples -> print -> gelman.diag -> chol -> chol.default
+Execution halted

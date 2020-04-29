@@ -1,0 +1,3 @@
+apt-get install jags
+pkg-config --modversion jags
+apt-get install libgdal-dev libudunits2-dev

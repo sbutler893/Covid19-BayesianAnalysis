@@ -1,0 +1,194 @@
+running
+  '/usr/lib/R/bin/R --slave --no-restore --no-save --no-restore --file=pipeline.R --args main_spatial_shorter'
+
+[1] "Sat Apr 25 12:30:26 AM 2020"
+[1] "[START] 2020-04-25 00:30:26"
+Loading required package: coda
+Linked to JAGS 4.3.0
+Loaded modules: basemod,bugs
+[1] "model name: main_spatial_shorter"
+[1] "config file: ./models/main_spatial_shorter.R"
+[1] "util.R loaded successfully."
+[1] "Lag (in days): 14"
+[1] 2091   40
+[1] "Dropped 287 rows for states with <10 total deaths."
+[1] 1804   40
+[1] "States: 44"
+ [1] "alabama"              "arizona"              "arkansas"            
+ [4] "california"           "colorado"             "connecticut"         
+ [7] "delaware"             "district of columbia" "florida"             
+[10] "georgia"              "idaho"                "illinois"            
+[13] "indiana"              "iowa"                 "kansas"              
+[16] "kentucky"             "louisiana"            "maine"               
+[19] "maryland"             "massachusetts"        "michigan"            
+[22] "minnesota"            "mississippi"          "missouri"            
+[25] "nebraska"             "nevada"               "new hampshire"       
+[28] "new jersey"           "new mexico"           "new york"            
+[31] "north carolina"       "ohio"                 "oklahoma"            
+[34] "oregon"               "pennsylvania"         "rhode island"        
+[37] "south carolina"       "tennessee"            "texas"               
+[40] "utah"                 "vermont"              "virginia"            
+[43] "washington"           "wisconsin"           
+[1] "Dropping rows with dates after 2020-03-27"
+[1] "Dropped 616 rows."
+[1] "Final dataframe is: 1188" "Final dataframe is: 16"  
+      Date            FutureDeathsPer100k DaysSince10Deaths  StateName        
+ Min.   :2020-03-01   Min.   :-0.27751    -12    : 43       Length:1188       
+ 1st Qu.:2020-03-07   1st Qu.: 0.00000    -13    : 43       Class :character  
+ Median :2020-03-14   Median : 0.03493    -14    : 43       Mode  :character  
+ Mean   :2020-03-14   Mean   : 0.16454    -15    : 43                         
+ 3rd Qu.:2020-03-21   3rd Qu.: 0.14052    -16    : 43                         
+ Max.   :2020-03-27   Max.   : 4.10998    -11    : 42                         
+                                          (Other):931                         
+    StateID        PopDensity         MedianAge       StayAtHome    
+ Min.   : 1.00   Min.   :   17.29   Min.   :30.70   Min.   :-41.00  
+ 1st Qu.:11.75   1st Qu.:   58.22   1st Qu.:37.05   1st Qu.:-22.00  
+ Median :22.50   Median :  115.64   Median :38.30   Median :-15.00  
+ Mean   :22.50   Mean   :  492.69   Mean   :38.31   Mean   :-14.95  
+ 3rd Qu.:33.25   3rd Qu.:  263.92   3rd Qu.:39.33   3rd Qu.: -7.00  
+ Max.   :44.00   Max.   :11814.54   Max.   :44.60   Max.   :  8.00  
+                                                                    
+   BizClosure     SchoolClosure     RetailAndRecPctChg GroceryPharmacyPctChg
+ Min.   :-41.00   Min.   :-31.000   Min.   :-63.00     Min.   :-37.000      
+ 1st Qu.:-18.00   1st Qu.: -9.000   1st Qu.:-33.00     1st Qu.: -1.000      
+ Median :-11.00   Median : -2.500   Median : -4.00     Median :  7.000      
+ Mean   :-11.55   Mean   : -2.568   Mean   :-11.12     Mean   :  5.341      
+ 3rd Qu.: -4.00   3rd Qu.:  5.000   3rd Qu.:  8.00     3rd Qu.: 13.000      
+ Max.   :  8.00   Max.   : 16.000   Max.   : 24.00     Max.   : 48.000      
+                                                                            
+  ParksPctChg     TransitPctChg    WorkplacesPctChg ResidentialPctChg
+ Min.   :-68.00   Min.   :-75.00   Min.   :-67.00   Min.   :-5.000   
+ 1st Qu.: -1.00   1st Qu.:-29.00   1st Qu.:-32.00   1st Qu.: 0.000   
+ Median : 20.00   Median : -6.00   Median : -6.00   Median : 3.000   
+ Mean   : 22.47   Mean   :-13.16   Mean   :-15.31   Mean   : 6.557   
+ 3rd Qu.: 42.00   3rd Qu.:  4.00   3rd Qu.:  2.00   3rd Qu.:13.000   
+ Max.   :187.00   Max.   : 32.00   Max.   : 18.00   Max.   :28.000   
+                                                                     
+Loading required package: methods
+Loading required package: sp
+Loading required package: spData
+Loading required package: sf
+Linking to GEOS 3.6.2, GDAL 2.2.3, PROJ 4.9.3
+Checking rgeos availability: TRUE
+  DaysSince10Deaths PopDensity MedianAge StayAtHome BizClosure SchoolClosure
+1                24    96.9221      38.9        -34        -26           -16
+2                22    96.9221      38.9        -33        -25           -15
+3                21    96.9221      38.9        -32        -24           -14
+4                20    96.9221      38.9        -31        -23           -13
+5                19    96.9221      38.9        -30        -22           -12
+6                18    96.9221      38.9        -29        -21           -11
+  RetailAndRecPctChg GroceryPharmacyPctChg ParksPctChg TransitPctChg
+1                 16                    10          53            21
+2                  8                     4          -2             5
+3                 20                    15          33             5
+4                  7                     0          -8             2
+5                  7                     6           0             4
+6                  9                     4          29            10
+  WorkplacesPctChg ResidentialPctChg
+1                4                -2
+2                2                 0
+3                2                -1
+4                0                 1
+5                2                 1
+6                2                -1
+[1] "description: Main Model: All Predictors; Spatial"
+[1] "model_string: 3"
+[1] "thin: 5"
+[1] "burnin: 50000"
+[1] "n.iter: 1e+05"
+[1] "params: beta"  "params: sig"   "params: tau_y"
+[1] "Instantiating model..."
+[1] "Burn-in for 50000 iterations..."
+[1] "Burn-in complete"
+[1] "Sampling for 1e+05 iterations..."
+[1] "/home/h4x/git/covid19-project"
+[1] "Saving model, samples to: ./out/main_spatial_shorter.RData"
+[1] "RData file saved."
+
+Iterations = 101005:201000
+Thinning interval = 5 
+Number of chains = 2 
+Sample size per chain = 20000 
+
+1. Empirical mean and standard deviation for each variable,
+   plus standard error of the mean:
+
+               Mean        SD  Naive SE Time-series SE
+beta[1]   5.829e-03 0.0006121 3.061e-06      4.158e-06
+beta[2]  -6.662e-07 0.0000286 1.430e-07      5.906e-07
+beta[3]   8.840e-05 0.0029581 1.479e-05      1.310e-04
+beta[4]   4.535e-03 0.0052628 2.631e-05      1.966e-04
+beta[5]   1.062e-02 0.0099286 4.964e-05      5.755e-04
+beta[6]  -2.085e-02 0.0100527 5.026e-05      4.911e-04
+beta[7]   2.878e-04 0.0015944 7.972e-06      2.219e-05
+beta[8]   7.563e-04 0.0010122 5.061e-06      1.037e-05
+beta[9]   9.610e-04 0.0003150 1.575e-06      3.383e-06
+beta[10] -5.439e-03 0.0015309 7.655e-06      1.995e-05
+beta[11]  5.397e-03 0.0027635 1.382e-05      6.911e-05
+beta[12]  2.448e-02 0.0065551 3.278e-05      1.614e-04
+sig[1]    2.740e-01 0.0057549 2.877e-05      2.859e-05
+sig[2]    4.554e-01 0.0560336 2.802e-04      5.050e-04
+tau_y     1.334e+01 0.5596634 2.798e-03      2.778e-03
+
+2. Quantiles for each variable:
+
+               2.5%         5%        50%        95%      97.5%
+beta[1]   4.618e-03  0.0048255  5.830e-03  6.835e-03  7.032e-03
+beta[2]  -5.730e-05 -0.0000474 -6.289e-07  4.634e-05  5.606e-05
+beta[3]  -6.073e-03 -0.0049094  1.487e-04  4.849e-03  5.699e-03
+beta[4]  -5.925e-03 -0.0041459  4.575e-03  1.329e-02  1.493e-02
+beta[5]  -1.002e-02 -0.0060885  1.078e-02  2.632e-02  2.939e-02
+beta[6]  -4.004e-02 -0.0368004 -2.105e-02 -3.714e-03  7.484e-05
+beta[7]  -2.824e-03 -0.0023429  2.877e-04  2.905e-03  3.404e-03
+beta[8]  -1.230e-03 -0.0009140  7.568e-04  2.418e-03  2.732e-03
+beta[9]   3.410e-04  0.0004436  9.603e-04  1.480e-03  1.577e-03
+beta[10] -8.417e-03 -0.0079513 -5.436e-03 -2.913e-03 -2.410e-03
+beta[11] -3.091e-05  0.0008271  5.421e-03  9.931e-03  1.078e-02
+beta[12]  1.139e-02  0.0136483  2.450e-02  3.528e-02  3.728e-02
+sig[1]    2.630e-01  0.2647791  2.739e-01  2.836e-01  2.855e-01
+sig[2]    3.604e-01  0.3727028  4.505e-01  5.555e-01  5.801e-01
+tau_y     1.227e+01 12.4316232  1.333e+01  1.426e+01  1.445e+01
+
+[1] "ESS:"
+   beta[1]    beta[2]    beta[3]    beta[4]    beta[5]    beta[6]    beta[7] 
+21694.5816  2346.3882   508.4221   716.9877   296.6925   417.5015  5158.6944 
+   beta[8]    beta[9]   beta[10]   beta[11]   beta[12]     sig[1]     sig[2] 
+ 9517.3132  8698.3716  5890.2824  1599.0596  1649.3871 40623.1377 12315.7855 
+     tau_y 
+40678.2271 
+[1] "Gelman Diagnostic:"
+Potential scale reduction factors:
+
+         Point est. Upper C.I.
+beta[1]        1.00       1.00
+beta[2]        1.00       1.00
+beta[3]        1.01       1.03
+beta[4]        1.00       1.00
+beta[5]        1.01       1.04
+beta[6]        1.01       1.03
+beta[7]        1.00       1.00
+beta[8]        1.00       1.00
+beta[9]        1.00       1.00
+beta[10]       1.00       1.00
+beta[11]       1.00       1.00
+beta[12]       1.00       1.00
+sig[1]         1.00       1.00
+sig[2]         1.00       1.00
+tau_y          1.00       1.00
+
+Multivariate psrf
+
+1.01
+[1] "Computing DIC ... ( thin = 5 )"
+Mean deviance:  292.6 
+penalty 50.68 
+Penalized deviance: 343.3 
+[1] "Computing WAIC / Pw ..."
+Error in jags.samples(model, variable.names, n.iter, thin, type = "trace",  : 
+  No valid monitors set
+Calls: evalmodel -> waic -> coda.samples -> jags.samples
+In addition: Warning message:
+In FUN(X[[i]], ...) : Failed to set trace monitor for like
+Variable like not found
+
+Execution halted

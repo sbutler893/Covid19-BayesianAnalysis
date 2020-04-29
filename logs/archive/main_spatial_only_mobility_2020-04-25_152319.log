@@ -1,0 +1,180 @@
+running
+  '/usr/lib/R/bin/R --slave --no-restore --no-save --no-restore --file=pipeline.R --args main_spatial_only_mobility'
+
+[1] "Sat Apr 25 15:23:19 2020"
+[1] "[START] 2020-04-25 15:23:19"
+Loading required package: coda
+Linked to JAGS 4.3.0
+Loaded modules: basemod,bugs
+[1] "model name: main_spatial_only_mobility"
+[1] "config file: ./models/main_spatial_only_mobility.R"
+[1] "util.R loaded successfully."
+[1] "Lag (in days): 14"
+[1] 2091   40
+[1] "Dropped 287 rows for states with <10 total deaths."
+[1] 1804   40
+[1] "States: 44"
+ [1] "alabama"              "arizona"              "arkansas"            
+ [4] "california"           "colorado"             "connecticut"         
+ [7] "delaware"             "district of columbia" "florida"             
+[10] "georgia"              "idaho"                "illinois"            
+[13] "indiana"              "iowa"                 "kansas"              
+[16] "kentucky"             "louisiana"            "maine"               
+[19] "maryland"             "massachusetts"        "michigan"            
+[22] "minnesota"            "mississippi"          "missouri"            
+[25] "nebraska"             "nevada"               "new hampshire"       
+[28] "new jersey"           "new mexico"           "new york"            
+[31] "north carolina"       "ohio"                 "oklahoma"            
+[34] "oregon"               "pennsylvania"         "rhode island"        
+[37] "south carolina"       "tennessee"            "texas"               
+[40] "utah"                 "vermont"              "virginia"            
+[43] "washington"           "wisconsin"           
+[1] "Dropping rows with dates after 2020-03-27"
+[1] "Dropped 616 rows."
+[1] "Final dataframe is: 1188" "Final dataframe is: 16"  
+      Date            FutureDeathsPer100k DaysSince10Deaths  StateName        
+ Min.   :2020-03-01   Min.   :-0.27751    -12    : 43       Length:1188       
+ 1st Qu.:2020-03-07   1st Qu.: 0.00000    -13    : 43       Class :character  
+ Median :2020-03-14   Median : 0.03493    -14    : 43       Mode  :character  
+ Mean   :2020-03-14   Mean   : 0.16454    -15    : 43                         
+ 3rd Qu.:2020-03-21   3rd Qu.: 0.14052    -16    : 43                         
+ Max.   :2020-03-27   Max.   : 4.10998    -11    : 42                         
+                                          (Other):931                         
+    StateID        PopDensity         MedianAge       StayAtHome    
+ Min.   : 1.00   Min.   :   17.29   Min.   :30.70   Min.   :-41.00  
+ 1st Qu.:11.75   1st Qu.:   58.22   1st Qu.:37.05   1st Qu.:-22.00  
+ Median :22.50   Median :  115.64   Median :38.30   Median :-15.00  
+ Mean   :22.50   Mean   :  492.69   Mean   :38.31   Mean   :-14.95  
+ 3rd Qu.:33.25   3rd Qu.:  263.92   3rd Qu.:39.33   3rd Qu.: -7.00  
+ Max.   :44.00   Max.   :11814.54   Max.   :44.60   Max.   :  8.00  
+                                                                    
+   BizClosure     SchoolClosure     RetailAndRecPctChg GroceryPharmacyPctChg
+ Min.   :-41.00   Min.   :-31.000   Min.   :-63.00     Min.   :-37.000      
+ 1st Qu.:-18.00   1st Qu.: -9.000   1st Qu.:-33.00     1st Qu.: -1.000      
+ Median :-11.00   Median : -2.500   Median : -4.00     Median :  7.000      
+ Mean   :-11.55   Mean   : -2.568   Mean   :-11.12     Mean   :  5.341      
+ 3rd Qu.: -4.00   3rd Qu.:  5.000   3rd Qu.:  8.00     3rd Qu.: 13.000      
+ Max.   :  8.00   Max.   : 16.000   Max.   : 24.00     Max.   : 48.000      
+                                                                            
+  ParksPctChg     TransitPctChg    WorkplacesPctChg ResidentialPctChg
+ Min.   :-68.00   Min.   :-75.00   Min.   :-67.00   Min.   :-5.000   
+ 1st Qu.: -1.00   1st Qu.:-29.00   1st Qu.:-32.00   1st Qu.: 0.000   
+ Median : 20.00   Median : -6.00   Median : -6.00   Median : 3.000   
+ Mean   : 22.47   Mean   :-13.16   Mean   :-15.31   Mean   : 6.557   
+ 3rd Qu.: 42.00   3rd Qu.:  4.00   3rd Qu.:  2.00   3rd Qu.:13.000   
+ Max.   :187.00   Max.   : 32.00   Max.   : 18.00   Max.   :28.000   
+                                                                     
+Loading required package: methods
+Loading required package: sp
+Loading required package: spData
+To access larger datasets in this package, install the spDataLarge
+package with: `install.packages('spDataLarge',
+repos='https://nowosad.github.io/drat/', type='source')`
+Loading required package: sf
+Linking to GEOS 3.6.2, GDAL 2.2.3, PROJ 4.9.3
+Checking rgeos availability: TRUE
+  RetailAndRecPctChg GroceryPharmacyPctChg ParksPctChg TransitPctChg
+1                 16                    10          53            21
+2                  8                     4          -2             5
+3                 20                    15          33             5
+4                  7                     0          -8             2
+5                  7                     6           0             4
+6                  9                     4          29            10
+  WorkplacesPctChg ResidentialPctChg
+1                4                -2
+2                2                 0
+3                2                -1
+4                0                 1
+5                2                 1
+6                2                -1
+[1] "description: Only mobility indicators"
+[1] "model_string: 3"
+[1] "thin: 1"
+[1] "burnin: 10000"
+[1] "n.iter: 50000"
+[1] "params: beta"  "params: sig"   "params: tau_y"
+[1] "Instantiating model..."
+Compiling model graph
+   Resolving undeclared variables
+   Allocating nodes
+Graph information:
+   Observed stochastic nodes: 1188
+   Unobserved stochastic nodes: 10
+   Total graph size: 17477
+
+Initializing model
+
+[1] "Burn-in for 10000 iterations..."
+[1] "Burn-in complete"
+[1] "Sampling for 50000 iterations..."
+[1] "/home/ubuntu/covid19-project"
+[1] "Saving model, samples to: ./out/main_spatial_only_mobility.RData"
+[1] "RData file saved."
+
+Iterations = 51001:101000
+Thinning interval = 1 
+Number of chains = 2 
+Sample size per chain = 50000 
+
+1. Empirical mean and standard deviation for each variable,
+   plus standard error of the mean:
+
+            Mean      SD  Naive SE Time-series SE
+beta[1]  0.07900 0.03053 9.653e-05      4.478e-04
+beta[2] -0.02759 0.01205 3.810e-05      6.987e-05
+beta[3]  0.03105 0.01080 3.417e-05      1.225e-04
+beta[4] -0.15729 0.03430 1.085e-04      5.617e-04
+beta[5]  0.13657 0.05564 1.760e-04      1.620e-03
+beta[6]  0.24160 0.05542 1.752e-04      1.622e-03
+sig[1]   0.28480 0.00599 1.894e-05      1.986e-05
+sig[2]   0.51099 0.06172 1.952e-04      3.043e-04
+tau_y   12.34477 0.51863 1.640e-03      1.720e-03
+
+2. Quantiles for each variable:
+
+             2.5%       5%      50%       95%     97.5%
+beta[1]  0.018701  0.02820  0.07920  0.128982  0.138508
+beta[2] -0.051157 -0.04735 -0.02759 -0.007794 -0.003983
+beta[3]  0.009908  0.01326  0.03106  0.048841  0.052332
+beta[4] -0.224038 -0.21350 -0.15739 -0.100911 -0.089951
+beta[5]  0.027684  0.04476  0.13660  0.228426  0.245937
+beta[6]  0.131226  0.14996  0.24185  0.331970  0.349363
+sig[1]   0.273386  0.27510  0.28470  0.294881  0.296824
+sig[2]   0.405822  0.42010  0.50559  0.620853  0.646887
+tau_y   11.350130 11.50022 12.33776 13.213621 13.379747
+
+[1] "ESS:"
+  beta[1]   beta[2]   beta[3]   beta[4]   beta[5]   beta[6]    sig[1]    sig[2] 
+ 4647.110 29731.527  7796.019  3748.612  1185.583  1167.960 90947.595 41134.366 
+    tau_y 
+90956.832 
+[1] "Gelman Diagnostic:"
+Potential scale reduction factors:
+
+        Point est. Upper C.I.
+beta[1]          1          1
+beta[2]          1          1
+beta[3]          1          1
+beta[4]          1          1
+beta[5]          1          1
+beta[6]          1          1
+sig[1]           1          1
+sig[2]           1          1
+tau_y            1          1
+
+Multivariate psrf
+
+1
+[1] "Computing DIC ... ( thin = 1 )"
+Mean deviance:  384.7 
+penalty 48.9 
+Penalized deviance: 433.6 
+[1] "Computing WAIC / Pw ..."
+Error in jags.samples(model, variable.names, n.iter, thin, type = "trace",  : 
+  No valid monitors set
+Calls: evalmodel -> waic -> coda.samples -> jags.samples
+In addition: Warning message:
+In FUN(X[[i]], ...) : Failed to set trace monitor for like
+Variable like not found
+
+Execution halted
